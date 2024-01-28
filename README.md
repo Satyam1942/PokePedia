@@ -1,8 +1,8 @@
 # Pokepedia
-
+To see the project visit this: https://satyam1942.github.io/PokePedia/
 ## Description:
 
-Pokepedia is an ongoing project created using ReactJS and Tailwind CSS. This project aims to provide a user-friendly interface for exploring information about various Pokémon. It allows users to search for Pokémon by name and view detailed information about each Pokémon.
+Pokepedia is an ongoing project created using PokeAPI, ReactJS and Tailwind CSS. This project aims to provide a user-friendly interface for exploring information about various Pokémon. It allows users to search for Pokémon by name and view detailed information about each Pokémon.
 
 ## Features:
 
