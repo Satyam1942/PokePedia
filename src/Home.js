@@ -63,7 +63,7 @@ const getImageURL = (index)=>{return (imageURL+(index+1).toString()+".png");}
           names.length>0 && (
             <div>
           
-          <div className='mt-10 grid  grid-cols-4 gap-10 justify-items-center'>
+          <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center'>
             {   
                 names.map((name,index)=>(
                   <div key = {index} className=" mt:20 hover: bg-hoverCardColor rounded-lg p-2  hover:animate-pulse">

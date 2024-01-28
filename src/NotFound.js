@@ -26,7 +26,7 @@ function NotFound(){
         <>
         <Header/>
         <BackgroundSlideshow/>
-        <h1 className="flex justify-center font-bold text-6xl  text-hoverCardColor">
+        <h1 className="flex justify-center font-bold text-2xl md:text-6xl  text-hoverCardColor">
         404 PAGE NOT FOUND
         </h1>
         <div className="flex justify-center m-10 text-hoverCardColor">

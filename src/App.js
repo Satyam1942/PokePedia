@@ -3,7 +3,6 @@ import HomePage from "./Home.js";
 import Details from './Details.js';
 import NotFound from './NotFound.js';
 import BackgroundSlideshow from './BackgroundSlideshow.js';
-import Sidebar from './Sidebar.js';
 
 function App() {  
 return (
@@ -12,7 +11,7 @@ return (
         <Route path="/Pokepedia" element={<HomePage />} />
         <Route path = "/PokePedia/details/:name" element={<Details/>}/>
         <Route path = "/PokePedia/notFound" element={<NotFound/>}/>
-        <Route path = "/PokePedia/background" element={<Sidebar/>}/>
+        <Route path = "/PokePedia/background" element={<BackgroundSlideshow/>}/>
         <Route path = "/PokePedia/*" element={<NotFound/>}/>
 
       </Routes>

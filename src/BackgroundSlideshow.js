@@ -25,10 +25,10 @@ function BackgroundSlideshow(){
     const backgroundImageStyle = {
         backgroundImage: `url(${backgroundImageList[currentImageIndex]})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center-center',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: '100%',
-        width: '100%',
+        height: '100vh',
+        width: '100vw',
         position: 'fixed',
         top: 0,
         left: 0,

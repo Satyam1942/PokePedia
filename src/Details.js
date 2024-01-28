@@ -61,7 +61,7 @@ function Details() {
         {
         isLoading?(
           <div className=' mt-10 flex  justify-center '>
-           <img src={loadingImage} style={{height: "100px" ,width: "100px" }}className=' animate-bounce   '></img>
+           <img src={loadingImage} style={{height: "100px" ,width: "100px" }}className=' animate-bounce '></img>
            </div>
         ):
         about && (
@@ -70,12 +70,11 @@ function Details() {
            {/* name  */}
           <h2 className=' font-bold  text-2xl flex justify-center mt-2 mb-5'>{beutifyName(about.name)}</h2>
 
-
-          <div className='grid grid-cols-2 gap--1'>
-
-            <img className=' bg-hoverCardColor hover:animate-ping hover:bg-buttonColor  rounded-lg ml-40' src= {getImageURL(about)} alt={altImageURL} style={{width:imageWidth ,height:imageHeight}}/>
-            <div className='grid grid-cols-3'>
-
+            {/* Image */}
+          <div className='grid grid-cols-1 xl:grid-cols-2  '>
+            <img className=' bg-hoverCardColor hover:animate-ping hover:bg-buttonColor  rounded-lg ml-20  sm:ml-30  md:ml-40 ' src= {getImageURL(about)} alt={altImageURL} style={{width:imageWidth ,height:imageHeight}}/>
+           
+            <div className='grid  grid-cols-2 md:grid-cols-3 mt-10 xl:mt-0'>
             {/* Types */}
             <div  className='   bg-detailsCard hover:bg-buttonColorSelected  rounded-lg border-borderColor ml-10 mr-10 mb-10  hover:text-buttonFontColor '>
             <h4 className='font-bold text-lg flex justify-center mt-2'>Types :</h4>
@@ -89,7 +88,7 @@ function Details() {
             </div>
 
                 {/* All Single Characteristics */}
-              <div className=' bg-detailsCard hover:bg-buttonColorSelected  rounded-lg border-borderColor ml-10 mr-10 mb-10 hover:text-buttonFontColor  p-2'>
+              <div className=' bg-detailsCard hover:bg-buttonColorSelected  rounded-lg border-borderColor ml-10 mr-10 mb-10 hover:text-buttonFontColor  md:p-2 p-1'>
             <h4>Base Experience : {about.base_experience}</h4>
             <h4>Height : {about.height}</h4>
             <h4>Weight : {getWeight(about.weight)}</h4>

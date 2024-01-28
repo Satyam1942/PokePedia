@@ -18,10 +18,10 @@ function Header(){
          setSearchText(event.target.value);
       }
     
-const SearchBar = ()=>{return (<input ref = {inputRef} type='text'  value={searchText} onChange={handleSearchBarChange} placeholder='Search By Name/Index ' className='p-2 rounded-lg   bg-mainBackgroundColor mr-2'></input>);}
-const SearchButton = ()=>{return (<button onClick={reload} className='p-2 rounded-lg bg-buttonColor  hover:opacity-90  text-buttonFontColor font-bold'>Search</button>); }
-const FeelingLucky = ()=>{return (<button onClick={reload} className='ml-2 p-2 rounded-lg bg-buttonColor  hover:opacity-90  text-buttonFontColor font-bold'>FeelingLucky</button>); }
-const HomeButton =  ()=>{return(<button className="mb-2 ml-2 text-3xl text-left text-blue-400  text-buttonFontColor">PokéPedia</button>)}
+const SearchBar = ()=>{return (<input ref = {inputRef} type='text'  value={searchText} onChange={handleSearchBarChange} placeholder='Search By Name/Index ' className='ml-2 md:ml-0 w-40 p-1 md:p-2 rounded-lg md:mr-2  bg-mainBackgroundColor '></input>);}
+const SearchButton = ()=>{return (<button onClick={reload} className=' ml-2 p-1 md:p-2 rounded-lg bg-buttonColor  hover:opacity-90  text-buttonFontColor font-bold'>Search</button>); }
+const FeelingLucky = ()=>{return (<button onClick={reload} className='ml-2 p-1 md:p-2 rounded-lg bg-buttonColor  hover:opacity-90  text-buttonFontColor font-bold  flex-auto'>FeelingLucky</button>); }
+const HomeButton =  ()=>{return(<button className=" md:mb-2  md:ml-4  text-3xl    text-buttonFontColor">PokéPedia</button>)}
 
 function makeSideBarVisible(){
   setVisibileSidebar(!isVisibleSidebar);
@@ -42,13 +42,15 @@ function reload (){
 }
     return(
       <>
-        <div className="h-14  bg-headerBgColor rounded-md">
-        <div className=' pt-2 grid grid-cols-3  justify-items-start'>
-        <Link className='grid grid-cols-9' to ={`/Pokepedia`}>
+        <div className=" h-32 sm:h-28 md:h-14  bg-headerBgColor rounded-md ">
+        <div className=' pt-2 grid grid-cols-1 md:grid-cols-3   '>
+
+        <Link className='grid lg:grid-cols-9  grid-cols-3 ' to ={`/Pokepedia`}>
         <img className="ml-2 rounded-lg" src={logo} style={{width:"40px", height:"40px"}} onClick={makeSideBarVisible}></img>
         <HomeButton/>
         </Link>
-        <div>
+
+        <div className='mt-3 md:mt-0 w-96  ml-20 sm:ml-40 md:ml-0'>
           <SearchBar/>
           <Link to={`/PokePedia/details/${sendSearchString()}`}>
           <SearchButton/>   
@@ -57,6 +59,7 @@ function reload (){
           <FeelingLucky/>
           </Link>
         </div>
+
         </div>
         {/* {isVisibleSidebar && <Sidebar/>} */}
         </div>
