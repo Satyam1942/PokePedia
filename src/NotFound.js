@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BackgroundSlideshow from "./BackgroundSlideshow";
 import Header from "./Header";
-import Footer from "./Footer";
 
 function NotFound(){
     const redirectTime = 1;
@@ -15,7 +14,7 @@ function NotFound(){
         },1000)
 
          setTimeout(()=>{
-            navigate("/PokePedia");
+            navigate("/");
         },time*1000);
      
         return () => clearInterval(intervalId);

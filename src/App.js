@@ -8,11 +8,11 @@ function App() {
 return (
     <Router>
       <Routes>
-        <Route path="/Pokepedia" element={<HomePage />} />
-        <Route path = "/PokePedia/details/:name" element={<Details/>}/>
-        <Route path = "/PokePedia/notFound" element={<NotFound/>}/>
-        <Route path = "/PokePedia/background" element={<BackgroundSlideshow/>}/>
-        <Route path = "/PokePedia/*" element={<NotFound/>}/>
+        <Route path="/" element={<HomePage />} />
+        <Route path = "/details/:name" element={<Details/>}/>
+        <Route path = "/notFound" element={<NotFound/>}/>
+        <Route path = "/background" element={<BackgroundSlideshow/>}/>
+        <Route path = "/*" element={<NotFound/>}/>
 
       </Routes>
     </Router>
