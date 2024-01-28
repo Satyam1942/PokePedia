@@ -44,16 +44,16 @@ function reload (){
       <>
         <div className="h-14  bg-headerBgColor rounded-md">
         <div className=' pt-2 grid grid-cols-3  justify-items-start'>
-        <Link className='grid grid-cols-9' to ={`/`}>
+        <Link className='grid grid-cols-9' to ={`/Pokepedia`}>
         <img className="ml-2 rounded-lg" src={logo} style={{width:"40px", height:"40px"}} onClick={makeSideBarVisible}></img>
         <HomeButton/>
         </Link>
         <div>
           <SearchBar/>
-          <Link to={`/details/${sendSearchString()}`}>
+          <Link to={`/PokePedia/details/${sendSearchString()}`}>
           <SearchButton/>   
           </Link>
-          <Link to={`/details/${randomNum}`}>
+          <Link to={`/PokePedia/details/${randomNum}`}>
           <FeelingLucky/>
           </Link>
         </div>

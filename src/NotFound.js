@@ -15,7 +15,7 @@ function NotFound(){
         },1000)
 
          setTimeout(()=>{
-            navigate("/");
+            navigate("/PokePedia");
         },time*1000);
      
         return () => clearInterval(intervalId);

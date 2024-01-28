@@ -10,7 +10,7 @@ function Details() {
   const [pageNotFound , setPageNotFound] = useState(false);
   const [isLoading ,setLoading] = useState(true);
   const [about,setAbout] = useState(null);
-  const match = useMatch('/details/:name');
+  const match = useMatch('/PokePedia/details/:name');
   const pokemonName = match.params.name;
   const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
   const altImageURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVYFJoiQl5YPHK2xiOHeyplhJWUpFZT4m0vw&usqp=CAU";
@@ -50,7 +50,7 @@ function Details() {
 
   if(pageNotFound){
     console.log("NOT FOUND");
-    return  navigate ("/notFound") ;
+    return  navigate ("/PokePedia/notFound") ;
   }
 
   return (

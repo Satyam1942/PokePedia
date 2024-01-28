@@ -9,11 +9,11 @@ function App() {
 return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path = "/details/:name" element={<Details/>}/>
-        <Route path = "/notFound" element={<NotFound/>}/>
-        <Route path = "/background" element={<Sidebar/>}/>
-        <Route path = "/*" element={<NotFound/>}/>
+        <Route path="/Pokepedia" element={<HomePage />} />
+        <Route path = "/PokePedia/details/:name" element={<Details/>}/>
+        <Route path = "/PokePedia/notFound" element={<NotFound/>}/>
+        <Route path = "/PokePedia/background" element={<Sidebar/>}/>
+        <Route path = "/PokePedia/*" element={<NotFound/>}/>
 
       </Routes>
     </Router>

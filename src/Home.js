@@ -67,7 +67,7 @@ const getImageURL = (index)=>{return (imageURL+(index+1).toString()+".png");}
             {   
                 names.map((name,index)=>(
                   <div key = {index} className=" mt:20 hover: bg-hoverCardColor rounded-lg p-2  hover:animate-pulse">
-                  <Link to={`/details/${name}`}>
+                  <Link to={`/PokePedia/details/${name}`}>
                     <img src= {getImageURL(index)} alt={altImageURL} style={{width:imageWidth ,height:imageHeight}}/>
                     <div className='font-bold'>
                     {beutifyName(name)}
