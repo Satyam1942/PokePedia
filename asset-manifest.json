@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Pokepedia/static/css/main.05f95e0e.css",
-    "main.js": "/Pokepedia/static/js/main.20b2e7cd.js",
-    "static/js/787.d4aba7ab.chunk.js": "/Pokepedia/static/js/787.d4aba7ab.chunk.js",
-    "static/media/bg1.jpg": "/Pokepedia/static/media/bg1.ecc0c1753449187bc188.jpg",
-    "static/media/bg2.jpg": "/Pokepedia/static/media/bg2.3239d93ce2b83e3875ad.jpg",
-    "static/media/bg3.jpg": "/Pokepedia/static/media/bg3.cea43fd3dfd68ba0f093.jpg",
-    "static/media/bg4.jpg": "/Pokepedia/static/media/bg4.27f7b51a352db3a10197.jpg",
-    "static/media/bg6.jpg": "/Pokepedia/static/media/bg6.be8010b25ce649770ecc.jpg",
-    "static/media/loading.png": "/Pokepedia/static/media/loading.64a2410e3d30c173a44f.png",
-    "index.html": "/Pokepedia/index.html",
-    "main.05f95e0e.css.map": "/Pokepedia/static/css/main.05f95e0e.css.map",
-    "main.20b2e7cd.js.map": "/Pokepedia/static/js/main.20b2e7cd.js.map",
-    "787.d4aba7ab.chunk.js.map": "/Pokepedia/static/js/787.d4aba7ab.chunk.js.map"
+    "main.css": "/PokePedia/static/css/main.05f95e0e.css",
+    "main.js": "/PokePedia/static/js/main.66d49d76.js",
+    "static/js/787.d4aba7ab.chunk.js": "/PokePedia/static/js/787.d4aba7ab.chunk.js",
+    "static/media/bg1.jpg": "/PokePedia/static/media/bg1.ecc0c1753449187bc188.jpg",
+    "static/media/bg2.jpg": "/PokePedia/static/media/bg2.3239d93ce2b83e3875ad.jpg",
+    "static/media/bg3.jpg": "/PokePedia/static/media/bg3.cea43fd3dfd68ba0f093.jpg",
+    "static/media/bg4.jpg": "/PokePedia/static/media/bg4.27f7b51a352db3a10197.jpg",
+    "static/media/bg6.jpg": "/PokePedia/static/media/bg6.be8010b25ce649770ecc.jpg",
+    "static/media/loading.png": "/PokePedia/static/media/loading.64a2410e3d30c173a44f.png",
+    "index.html": "/PokePedia/index.html",
+    "main.05f95e0e.css.map": "/PokePedia/static/css/main.05f95e0e.css.map",
+    "main.66d49d76.js.map": "/PokePedia/static/js/main.66d49d76.js.map",
+    "787.d4aba7ab.chunk.js.map": "/PokePedia/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05f95e0e.css",
-    "static/js/main.20b2e7cd.js"
+    "static/js/main.66d49d76.js"
   ]
 }
