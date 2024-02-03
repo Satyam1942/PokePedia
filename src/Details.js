@@ -49,7 +49,7 @@ function Details() {
   const beutifyName = (name)=>{return (name.charAt(0).toUpperCase()+ name.slice(1));} 
   const getImageURL = (about)=>{return (about.sprites.other['official-artwork'].front_default);}
   const getWeight = (weight)=>{return ((weight/10.0)+" Kg");}
-
+  const getHeight = (height)=>{return ((height/10.0)+" m");}
 
 
   if(pageNotFound){
@@ -123,7 +123,7 @@ function Details() {
                 {/* All Single Characteristics */}
               <div className=' bg-detailsCard hover:bg-buttonColorSelected  rounded-lg border-borderColor ml-10 mr-10 mb-10 hover:text-buttonFontColor  md:p-2 p-1'>
             <h4>Base Experience : {about.base_experience}</h4>
-            <h4>Height : {about.height}</h4>
+            <h4>Height : {getHeight(about.height)}</h4>
             <h4>Weight : {getWeight(about.weight)}</h4>
             <h4>Species : {beutifyName(about.species.name)}</h4>
             </div>
