@@ -2,12 +2,12 @@ import {useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import BackgroundSlideshow from './BackgroundSlideshow.js';
 import Header  from './Header.js';
-
+import loadingImage from "./images/loading.png"
 
 
 function Home() {  
 
-  const [isLoading,setLoading] = useState(false);
+  const [isLoading,setLoading] = useState(true);
   const [about,setAbout] = useState(null);
   const [names,setNames] = useState([]);
   const [nextUrl,setNextUrl] = useState(null);
@@ -25,12 +25,12 @@ function Home() {
       .then((data)=>{
            console.log(data);
            setAbout(data);
-
+           setLoading(false);
            const extractedNames = data.results.map(item => item.name);
            const resultArray = [...names,...extractedNames];
            setNames(resultArray)
            setNextUrl(data.next);
-           setLoading(true);
+   
         })
         .catch((err)=>{
           console.log(err);
@@ -38,9 +38,10 @@ function Home() {
   }
   
   useEffect(()=>{
-    if(!isLoading)
-      GetHTTPRequest(baseURL)
+      if(isLoading)
+        GetHTTPRequest(baseURL)
   },[]);
+
 
   const loadNextPage = ()=>{
         if(nextUrl){
@@ -60,6 +61,11 @@ const getImageURL = (index)=>{return (imageURL+(index+1).toString()+".png");}
     <BackgroundSlideshow/>
     <div className="Home"   >
         { 
+        isLoading?(
+          <div className=' mt-10 flex  justify-center '>
+           <img src={loadingImage} style={{height: "100px" ,width: "100px" }}className=' animate-bounce '></img>
+           </div>
+        ):
           names.length>0 && (
             <div>
           

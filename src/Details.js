@@ -17,6 +17,7 @@ function Details() {
   const imageHeight = "350px" 
   const imageWidth = "350px"
   const navigate = useNavigate();
+  const maxCacheLength = 8;
   console.log(url)
 
 
@@ -43,14 +44,41 @@ function Details() {
        GetHTTPRequest();
     },[]);
     console.log(isLoading);
+
+
   const beutifyName = (name)=>{return (name.charAt(0).toUpperCase()+ name.slice(1));} 
   const getImageURL = (about)=>{return (about.sprites.other['official-artwork'].front_default);}
   const getWeight = (weight)=>{return ((weight/10.0)+" Kg");}
+
+
 
   if(pageNotFound){
     console.log("NOT FOUND");
     return  navigate ("/notFound") ;
   }
+
+  const storageFunc = (name,imageUrl)=>{
+    let cache = [];
+
+    if(localStorage.getItem("pokemonHistory")){
+       cache  = JSON.parse(localStorage.getItem("pokemonHistory"));
+    }
+
+    const hasDuplicate = cache.some((item)=>item.name===name);
+    if(!hasDuplicate){
+        cache.push({name,imageUrl});
+        // console.log(`after pushing ${cache}`)
+
+        if(cache.length>maxCacheLength)
+          cache.shift(); 
+
+        const valueCache = cache.map(value=>value)
+        localStorage.setItem("pokemonHistory",JSON.stringify(valueCache))
+
+        console.log(localStorage);
+    }
+  }
+
 
   return (
     <>
@@ -65,6 +93,12 @@ function Details() {
         ):
         about && (
           <div>
+           
+            {/* adding and removing data to and from  cache */}
+            {
+              storageFunc(about.name,getImageURL(about))
+            }
+            
 
            {/* name  */}
           <h2 className=' font-bold  text-2xl flex justify-center mt-2 mb-5'>{beutifyName(about.name)}</h2>

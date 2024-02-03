@@ -45,10 +45,10 @@ function reload (){
         <div className=" h-32 sm:h-28 md:h-14  bg-headerBgColor rounded-md ">
         <div className=' pt-2 grid grid-cols-1 md:grid-cols-3   '>
 
-        <Link className='grid lg:grid-cols-9  grid-cols-3 ' to ={`/`}>
+        <button className='grid lg:grid-cols-9  grid-cols-3 ' onClick={makeSideBarVisible}>
         <img className="ml-2 rounded-lg" src={logo} style={{width:"40px", height:"40px"}} onClick={makeSideBarVisible}></img>
         <HomeButton/>
-        </Link>
+        </button>
 
         <div className='mt-3 md:mt-0 w-96  ml-20 sm:ml-40 md:ml-0'>
           <SearchBar/>
@@ -61,7 +61,7 @@ function reload (){
         </div>
 
         </div>
-        {/* {isVisibleSidebar && <Sidebar/>} */}
+        {isVisibleSidebar && <Sidebar/>}
         </div>
       </>
     );
