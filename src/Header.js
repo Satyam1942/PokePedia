@@ -2,6 +2,7 @@ import {useState, useEffect, useRef} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import logo from "./images/logo192.png"
 import Sidebar from './Sidebar'
+import SearchSuggestion from './SearchSuggestionSystem';
 
 function Header(){
     const navigate = useNavigate();
@@ -14,7 +15,8 @@ function Header(){
     const handleSearchBarChange = (event)=>{
         setTimeout(() => {
           inputRef.current.focus();
-        }, 0);
+        }, 1);
+
          setSearchText(event.target.value);
       }
     
@@ -58,9 +60,10 @@ function reload (){
           <Link to={`/details/${randomNum}`}>
           <FeelingLucky/>
           </Link>
+          {!isVisibleSidebar && <SearchSuggestion token={searchText}/>}
+        </div>
         </div>
 
-        </div>
         {isVisibleSidebar && <Sidebar/>}
         </div>
       </>

@@ -6,11 +6,12 @@ import BackgroundSlideshow from './BackgroundSlideshow.js';
 import History  from './History.js';
 
 
+
 function App() {  
 return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage/>} />
         <Route path = "/details/:name" element={<Details/>}/>
         <Route path = "/notFound" element={<NotFound/>}/>
         <Route path = "/background" element={<BackgroundSlideshow/>}/>
