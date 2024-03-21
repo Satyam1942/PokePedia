@@ -11,7 +11,7 @@ function BackgroundSlideshow(){
     const [currentImageIndex, setCurrentIndex] = useState(0);
     const backgroundImageList = [bg1,bg2,bg3,bg4,bg6];
     const time = 5000;
-    const transitionDuration = 1000; 
+    const transitionDuration = 500; 
 
     const [nextBackgroundImageLoaded, setnextBackgroundImageLoaded] = useState(false);
 

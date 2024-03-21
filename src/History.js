@@ -21,9 +21,10 @@ function History(){
         <>
             <Header/>
             <BackgroundSlideshow/>
-            <div className=' flex justify-center text-headerBgColor text-2xl  font-bold'> 
+            <div className=' flex justify-center  text-mainBackgroundColor  text-2xl  font-bold'> 
                 RECENTLY VIEWED POKEMON
             </div>
+
             { 
             
             cache.length==0 ? (
@@ -48,6 +49,7 @@ function History(){
             </div>
             )
             }
+
         </>
     );
 }
