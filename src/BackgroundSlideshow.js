@@ -11,20 +11,9 @@ function BackgroundSlideshow(){
     const [currentImageIndex, setCurrentIndex] = useState(0);
     const backgroundImageList = [bg1,bg2,bg3,bg4,bg6];
     const time = 5000;
+    const transitionDuration = 1000; 
 
-    // const cacheImages = async (backgroundImageList)=>{
-    //   const promises  = await backgroundImageList.map((src)=>{
-    //     return new Promise (function (resolve,reject){
-    //         const img = new Image();
-    //         img.src = src;
-    //         img.onload =resolve();
-    //         img.onerror = reject();
-
-    //     });
-    //   });
-    //   await Promise.all(promises);
-
-    // }
+    const [nextBackgroundImageLoaded, setnextBackgroundImageLoaded] = useState(false);
 
     useEffect(()=>{
         const slideShowInterval = setInterval(()=>{
@@ -32,7 +21,6 @@ function BackgroundSlideshow(){
               console.log(backgroundImageList[currentImageIndex])
         },time);
 
-        // cacheImages(backgroundImageList);
         return ()=>clearInterval(slideShowInterval);
     },[backgroundImageList]);
 
@@ -47,8 +35,26 @@ function BackgroundSlideshow(){
         top: 0,
         left: 0,
         zIndex: -1,
+        transition: `opacity ${transitionDuration/1000}s ease`,
+        opacity: nextBackgroundImageLoaded? 1:0
+
       };
 
+      console.log(nextBackgroundImageLoaded);
+
+      useEffect(()=>{
+        const  imagePreload = new Image();
+        const nextIndex = (currentImageIndex + 1) % backgroundImageList.length;
+        imagePreload.src = backgroundImageList[nextIndex];
+        imagePreload.onload = ()=>{
+          setnextBackgroundImageLoaded(true);
+        }
+
+        return ()=>{
+            imagePreload.onload = null;
+        }
+      },[currentImageIndex,backgroundImageList]);
+      
 
       return (
       <div style={backgroundImageStyle}></div>

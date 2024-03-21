@@ -16,7 +16,7 @@ function reload (){
 
 return (
     <>
-        <ul className="  rounded-md  w-40  bg-buttonFontColor   relative z-50 ">
+        <div className="  rounded-md  w-40  bg-buttonFontColor   relative z-50 ">
            {
             pokemonNameList.filter(item=>{
                 const searchTerm = prop.token.toLowerCase();
@@ -24,11 +24,11 @@ return (
                 return searchTerm && itemList.startsWith(searchTerm);
             }).slice(0,10).map((name,index)=>(
                 <Link to={`/details/${name}`} onClick={()=>reload()}>
-                <li className=' text-center hover:bg-buttonColorSelected hover:rounded-md'>{beutifyName(name)}</li>
+                <ul className=' text-center hover:bg-buttonColorSelected hover:rounded-md'>{beutifyName(name)}</ul>
                 </Link>
             ))
            }
-        </ul>
+        </div>
     </>
 );
 }
